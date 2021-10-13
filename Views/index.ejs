@@ -1,0 +1,29 @@
+<%- include('partials/header.ejs')  %> 
+
+<body>
+   <div class="container">
+       
+    <% filmes.forEach(filme => { %>
+        <br>
+
+        <div class="card">
+
+            <div class="card-title">
+                <a href="movie/<%= filme.id%>"><h3><%= filme.titulo %></h3></a>
+            </div>
+            <div class="card-text">
+                <p> <%= filme.descricao %> </p>
+                <p> <%= filme.ano %> </p>
+            </div>
+            <div class="card-link">
+                <a href="<%= filme.imdb %>">Confira o filme</a>
+            </div>
+
+        </div>
+
+    <% }); %> 
+
+   </div>
+</body>
+
+<%- include('partials/footer.ejs')  %>
